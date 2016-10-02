@@ -1,0 +1,35 @@
+export declare class SharedVariables {
+    patient: string;
+    dob: string;
+    physician: string;
+    hospital: string;
+    assist: string;
+    dateofsurgery: string;
+    inpatientadmit: string;
+    erconsultcode: string;
+    inpatientconsult: string;
+    clinicalmodifiers: string;
+    icd: string;
+    cpt: string;
+    surgicalmodifiers: string;
+    notes: string;
+    constructor();
+    setE1ChitVariables(patient: any, dob: any, physician: any, hospital: any, assist: any, dateofsurgery: any): void;
+    setE2ChitVariables(inpatientadmit: any, erconsultcode: any, inpatientconsult: any, clinicalmodifiers: any): void;
+    setE3ChitVariables(icd: any, cpt: any, surgicalmodifiers: any, notes: any): void;
+    getChitVariables(): string[];
+    getPatient(): string;
+    getDOB(): string;
+    getPhysician(): string;
+    getHospital(): string;
+    getAssist(): string;
+    getDateOfSurgery(): string;
+    getInPatientAdmit(): string;
+    getErConsultCode(): string;
+    getInpatientConsult(): string;
+    getClinicalModifiers(): string;
+    getICD(): string;
+    getCPT(): string;
+    getSurgicalModifiers(): string;
+    getNotes(): string;
+}

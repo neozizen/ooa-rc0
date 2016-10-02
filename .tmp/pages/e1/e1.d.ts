@@ -1,0 +1,34 @@
+import { NavController, NavParams } from 'ionic-angular';
+import { MailGun } from "../../providers/mail-gun/mail-gun";
+import { Data } from '../../providers/data/data';
+import { SharedVariables } from '../../providers/shared-variables/shared-variables';
+export declare class E1Page {
+    _tabsNavCtrl: NavController;
+    _tabsDataService: Data;
+    _tabsMailGun: MailGun;
+    _tabsNavParams: NavParams;
+    _tabsSharedVariables: SharedVariables;
+    _tabsForm: string;
+    private _tabsForms;
+    _tabsPatient: string;
+    _tabsDob: string;
+    _tabsPhysician: string;
+    _tabsHospital: string;
+    _tabsAssist: string;
+    _tabsDateofsurgery: string;
+    _tabsInpatientadmit: string;
+    _tabsErconsultcode: string;
+    _tabsInpatientconsult: string;
+    _tabsClinicalmodifiers: string;
+    _tabsIcd: string;
+    _tabsCpt: string;
+    _tabsSurgicalmodifiers: string;
+    _tabsNotes: string;
+    mailgunUrl: string;
+    mailgunApiKey: string;
+    constructor(_tabsNavCtrl: NavController, _tabsDataService: Data, _tabsMailGun: MailGun, _tabsNavParams: NavParams, _tabsSharedVariables: SharedVariables);
+    ionViewAfterLeave(): void;
+    sendForm(): void;
+    saveForm(_tabsForm: any): void;
+    return(): void;
+}
