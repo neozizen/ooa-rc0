@@ -1,0 +1,32 @@
+<!-- Created by: Eric S. Holland -->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Inpatient Consult</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+  Inpatient Consult
+  </ion-list-header>
+  <ion-item>
+    <ion-label floating><ion-icon name="contacts">  Inpatient Consult</ion-icon></ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating><ion-icon name="cog">Inpatient Consult Code</ion-icon></ion-label>
+    <ion-select [(ngModel)]="consultModifiers">
+      <ion-option value="99251">99251</ion-option>
+      <ion-option value="99252">99252</ion-option>
+      <ion-option value="99253">99253</ion-option>
+      <ion-option value="99254">99254</ion-option>
+      <ion-option value="99255">99255</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</ion-content>

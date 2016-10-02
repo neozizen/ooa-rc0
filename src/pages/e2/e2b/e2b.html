@@ -1,0 +1,32 @@
+<!-- Created by: Eric S. Holland -->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ER Consult</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+  ER Consult Code
+  </ion-list-header>
+  <ion-item>
+    <ion-label floating><ion-icon name="heart">  ER Consult Code</ion-icon></ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating><ion-icon name="cog">ER Consult Code</ion-icon></ion-label>
+    <ion-select [(ngModel)]="erModifiers">
+      <ion-option value="99241">99241</ion-option>
+      <ion-option value="99242">99242</ion-option>
+      <ion-option value="99243">99243</ion-option>
+      <ion-option value="99244">99244</ion-option>
+      <ion-option value="99245">99245</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</ion-content>

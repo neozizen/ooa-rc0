@@ -1,0 +1,22 @@
+<!-- Created by: Eric S. Holland -->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CPT</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list id="ion-item">
+  <ion-item id="ion-item" *ngFor="let cpt of cpts">
+    <ion-label>{{cpt}}</ion-label>
+    <ion-checkbox [(ngModel)]=cpt.checked></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+
+</ion-content>

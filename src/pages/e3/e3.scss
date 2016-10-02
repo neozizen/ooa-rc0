@@ -1,0 +1,71 @@
+
+
+#e3-ion-item-01 {
+  background-color: transparent;
+}
+
+#e3-ion-title {
+  color: #dffb08;
+}
+
+
+//
+// #ion-list {
+//   background-color: blue;
+// }
+//
+// #ion-div {
+//   background-color: black;
+// }
+
+.e3 {
+
+
+  h1, h2, h3, h4, h5, h6 {
+
+  }
+
+  p {
+    color: #e3ecf1;
+    text-transform: uppercase;
+  }
+
+  ion-icon{
+    font-size: 7em;
+    color: #c8dbe4;
+  }
+
+  scroll-content {
+    display: flex;
+    flex-direction: column;
+    // background: #16222A; /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -moz-radial-gradient(center, ellipse cover, #3a6073 0%, #16222A 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3a6073), color-stop(100%, #16222A)); /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #3a6073 0%, #16222A 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #3a6073 0%, #16222A 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #3a6073 0%, #16222A 100%); /* ie10+ */
+    background: radial-gradient(ellipse at center, #3a6073 0%, #16222A 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a6073', endColorstr='#16222A',GradientType=0 ); /* ie6-9 */
+  }
+
+  ion-grid {
+    padding: 0;
+    height: 100%;
+  }
+
+  .masthead {
+    flex: 2;
+  }
+
+  ion-row {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+  }
+  ion-col {
+
+  }
+
+}

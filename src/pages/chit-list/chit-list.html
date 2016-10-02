@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar id="chit-list-ion-navbar">
+    <button ion-button menuToggle>
+      <ion-icon color="secondary" name="menu"></ion-icon>
+    </button>
+    <ion-title>
+    <div id="chit-list-div-01">CHIT List</div>
+    </ion-title>
+    <ion-buttons id="chit-list-ion-buttons" end>
+       <button ion-button (click)="removeForm(_chitlistForm)"><ion-icon color="secondary" name="nuclear"></ion-icon></button>
+    <button ion-button (click)="startApp()">
+      <ion-icon color="secondary" name="mail"></ion-icon>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen id="chit-list-ion-content">
+  <ion-list>
+    <!-- <ion-item-sliding *ngFor="let form of forms"> -->
+     <!-- <ion-item id="chit-list-ion-item" *ngFor="let form of forms" (click)="editForm(form)"> -->
+     <ion-item id="chit-list-ion-item" *ngFor="let _chitlistForm of _chitlistForms">
+        <h3>{{_chitlistForm.D_chitlistPatient}}</h3>
+        <p>{{_chitlistForm._chitlistDob}}</p>
+        <p>{{_chitlistForm._chitlistPhysician}}</p>
+        <p>{{_chitlistForm._chitlistHospital}}</p>
+        <p>{{_chitlistForm._chitlistAssist}}</p>
+        <p>{{_chitlistForm._chitlistDateofsurgery}}</p>
+
+      </ion-item>
+      <!-- <ion-item-options>
+        <button primary (click)="sendForm(form)"><ion-icon name="send"></ion-icon></button>
+        <button danger (click)="removeForm(form)"><ion-icon name="trash"></ion-icon></button>
+      </ion-item-options> -->
+    <!-- </ion-item-sliding> -->
+  </ion-list>
+</ion-content>

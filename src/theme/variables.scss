@@ -1,0 +1,148 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+$text-color:        #000;
+$background-color:  #fff;
+
+//added by jeff g. 9.22 to help with site wide themeing
+$_ion-datetime-color: #fff;
+$_ion-input-color: #fff;
+$_ion-label-color: #d3eefb;
+$_ion-select-color: #fff;
+$_ion-item-color: #fff;
+$teal1: #d3eefb;
+$teal2: #749bae;
+$teal3: #3a6073;
+$teal4: #16222A;
+$teal5: #08171f;
+
+
+//added by unknown artist
+$ion-list-header-background:;
+$ion-list-header-font-color:#222;
+$ion-list-header-font-weight: bold;
+$ion-list-header-padding-top: 1rem;
+$ion-list-header-padding-bottom: 1rem;
+
+// $text-input-md-show-focus-highlight: false;
+// $toolbar-background: transparent;
+
+// JG - this is to fix the toolbar coloring to match theme
+// $toolbar-active-color:	#749bae;
+$toolbar-active-color:	#3a6073;
+// $toolbar-text-color:	$text-color;
+// $toolbar-border-color:	color($colors, dark);
+// $toolbar-inactive-color:	#8c8c8c;
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #3a6073, // added by eric s holland
+  secondary:  #a6bdc6,
+  danger:     #093545,
+  light:      #568090,
+  dark:       #222,
+  favorite:   #011720,
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+//
+// Inserted by Jeff G. 9/16 for styling of toolbar and tabs
+//
+
+$navbar-md-height: 0px;
+$item-md-detail-push-show: true;
+$item-md-detail-push-color: #d3eefb;
+$label-md-text-color-focused: #d3eefb;
+$label-md-text-color: #d3eefb;
+$text-input-md-highlight-color: #d3eefb;
+
+//$menu-md-background:	green;
+//$menu-md-box-shadow:	0 0 10px rgba(0, 0, 0, .25);
+
+// removes the green underline from ion-inputs after data has been entered
+$text-input-md-highlight-color-valid: none;
+
+// this is here so that the datetime content has same padding as the selector and the input elements
+$datetime-md-padding-bottom: 8px;
+$datetime-md-padding-top: 7px;
+
+// this is to fix the tab navigation system so the backround is transparent
+$tabs-md-background: rgba($teal4, 0.93);;
+
+// this is to fix the tab navigation system so the active backround icons and text are white
+$tabs-md-tab-color-active:	#749bae;
+// $tabs-md-tab-color:	#3A6073;
+$tabs-md-tab-color:	#3a6073;
+
+// $segment-button-md-text-color-activated: $toolbar-md-active-color;
+// $toolbar-md-title-padding: 0px;
+
+$toolbar-md-active-color:	$toolbar-active-color;
+// $toolbar-md-background:	$toolbar-background;
+// $toolbar-md-border-color:	$toolbar-border-color;
+// $toolbar-md-border-color:	$toolbar-border-color;
+// $toolbar-md-button-border-radius:	2px;
+// $toolbar-md-button-color:	$toolbar-md-title-text-color;
+// $toolbar-md-button-font-size:	1.4rem;
+$toolbar-md-height:	0px;
+// $toolbar-md-inactive-color;	$toolbar-inactive-color;
+$toolbar-md-padding: 0px;
+// $toolbar-md-text-color:	#424242;
+// $toolbar-md-title-font-size:	2rem;
+// $toolbar-md-title-text-color: color-contrast($colors-md, $toolbar-md-background, md);
+
+//
+// End inserted by Jeff G.
+//
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+$ionicons-font-path: "../assets/fonts";
+@import "ionicons";

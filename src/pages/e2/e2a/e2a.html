@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Inpatient Admit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<ion-list dark>
+  <ion-list-header>
+    Inpatient Admit
+  </ion-list-header>
+  <ion-item>
+    <ion-label floating><ion-icon name="man">  Inpatient Admit Code</ion-icon></ion-label>
+    <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-list>
+    <ion-item>
+      <ion-label floating><ion-icon name="cog">Inpatient Admit Code</ion-icon></ion-label>
+      <ion-select [(ngModel)]="admitModifiers">
+        <ion-option value="99221">99221</ion-option>
+        <ion-option value="99222">99222</ion-option>
+        <ion-option value="99223">99223</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-list>
+</ion-content>

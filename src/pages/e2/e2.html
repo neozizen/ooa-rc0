@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar danger>
+    <ion-title>Inpatient Codes</ion-title>
+    <ion-buttons start>
+      <button (click)="home()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button (click)="showConfirm()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <button>
+        <ion-icon name="folder"></ion-icon>
+      </button>
+      <button>
+        <ion-icon name="mail"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs dark tabsPlacement = "bottom">
+  <ion-tab [root]="e2aRoot" tabTitle="Inpatient Codes" tabIcon="man"></ion-tab>
+  <ion-tab [root]="e2bRoot" tabTitle="ER Consult Code" tabIcon="heart"></ion-tab>
+  <ion-tab [root]="e2cRoot" tabTitle="Inpatient Consult" tabIcon="contacts"></ion-tab>
+</ion-tabs>

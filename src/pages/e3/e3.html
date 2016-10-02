@@ -1,0 +1,108 @@
+  <ion-header>
+    <ion-navbar transparent id="chit-list-ion-navbar">
+      <button menuToggle>
+        <ion-icon favorite name="menu"></ion-icon>
+      </button>
+      <ion-title ><div id="e3-ion-title" class="divtitle">CPT Codes</div></ion-title>
+      <ion-buttons end>
+      <button (click)="return()"><ion-icon favorite name="undo"></ion-icon></button>
+      <button (click)="email()"><ion-icon favorite name="mail"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar transparent>
+      <ion-segment [(ngModel)]="diag">
+        <ion-segment-button value="cpt">
+          CPT Codes Toolbar
+        </ion-segment-button>
+        <ion-segment-button value="icd">
+          ICD Codes
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen padding class="e3">
+
+
+<div id="ion-div" [ngSwitch]="diag">
+  <ion-list no-lines id="ion-list" *ngSwitchCase="'cpt'">
+
+    <ion-item id="e3-ion-item-01">
+      <ion-label>CPT Codes</ion-label>
+      <ion-select [(ngModel)]="cptcods" multiple="true" cancelText="Dismiss" okText="Okay!">
+        <ion-option *ngFor="let cpt of cpts" value="{{cpt}}">{{cpt}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- <ion-item id="e3-ion-item-01">
+          <ion-label>CPT Codes</ion-label>
+          <ion-select [(ngModel)]="cpt" multiple="true" cancelText="Dismiss" okText="Okay!">
+          <ion-option value="23615-ORIF clavicle">2315-ORIF clavicle</ion-option>
+          <ion-option value="23615-ORIF proximal humeral fracture">23615-ORIF proximal humeral fracture</ion-option>
+          <ion-option value="24515-ORIF humeral shaft fracture">24515-ORIF humeral shaft fracture</ion-option>
+          <ion-option value="24545-ORIF supracondylar humerus fracture">24545-ORIF supracondylar humerus fracture</ion-option>
+          <ion-option value="25515-ORIF radial shaft fracture">25515-ORIF radial shaft fracture</ion-option>
+          <ion-option value="25545-ORIF ulna shaft fracture">25545-ORIF ulna shaft fracture</ion-option>
+          <ion-option value="25575-ORIF radius and ulna shaft fracture">25575-ORIF radius and ulna shaft fracture</ion-option>
+          <ion-option value="25606-Percutaneous fixation distal radius fracture">25606-Percutaneous fixation distal radius fracture</ion-option>
+          <ion-option value="25607-ORIF extra articular distal radius fracture">25607-ORIF extra articular distal radius fracture</ion-option>
+          <ion-option value="25608-ORIF 2 part distal radius fracture">25608-ORIF 2 part distal radius fracture</ion-option>
+          <ion-option value="25609-ORIF three-part distal radius fracture">25609-ORIF three-part distal radius fracture</ion-option>
+          <ion-option value="27130-Total hip arthroplasty">27130 total hip arthroplasty</ion-option>
+          <ion-option value="27235-Percutaneous screws femoral neck fracture">27235-percutaneous screws femoral neck fracture</ion-option>
+          <ion-option value="27236-Endoprosthesis for femoral neck fracture">27236-Endoprosthesis for femoral neck fracture</ion-option>
+          <ion-option value="27244-ORIF intertrochanteric hip fracture with DHS">27244-ORIF intertrochanteric hip fracture with DHS</ion-option>
+          <ion-option value="27245-IMR for intertrochanteric hip fracture">27245-IMR for intertrochanteric hip fracture</ion-option>
+          <ion-option value="27266-Closed reduction total hip arthroplasty">27266-closed reduction total hip arthroplasty</ion-option>
+          <ion-option value="27506-ORIF femoral shaft fracture with IMR">27506-ORIF femoral shaft fracture with IMR</ion-option>
+          <ion-option value="27507-ORIF femoral shaft with plate and screws">27507-ORIF femoral shaft with plate and screws</ion-option>
+          <ion-option value="27511-ORIF supracondylar femur fracture w/o joint involvement">27511-ORIF supracondylar femur fracture w/o joint involvement</ion-option>
+          <ion-option value="27513-ORIF supracondylar femur with joint involvement">27513-ORIF supracondylar femur with joint involvement</ion-option>
+          <ion-option value="27524-ORIF patella fracture">27524-ORIF patella fracture</ion-option>
+          <ion-option value="27535-ORIF tibial plateau fracture unicondylar">27535-ORIF tibial plateau fracture unicondylar</ion-option>
+          <ion-option value="27536-ORIF tibial plateau fracture bicondylar fx">27536-ORIF tibial plateau fracture bicondylar fx</ion-option>
+          <ion-option value="27758-ORIF tibial shaft with plate and screws">27758-ORIF tibial shaft with plate and screws</ion-option>
+          <ion-option value="27759-ORIF tibial shaft with IMR">27759-ORIF tibial shaft with IMR</ion-option>
+          <ion-option value="27766-ORIF medial malleolus fracture">27766-ORIF medial malleolus fracture</ion-option>
+          <ion-option value="27769-ORIF posterior malleolus fracture">27769-ORIF posterior malleolus fracture</ion-option>
+          <ion-option value="27792-ORIF distal fibula fracture">27792-ORIF distal fibula fracture</ion-option>
+          <ion-option value="27814-ORIF bimalleolar ankle fracture">27814-ORIF bimalleolar ankle fracture</ion-option>
+          <ion-option value="27822-ORIF trimalleolar fracture without posterior fixation">27822-ORIF trimalleolar fracture without posterior fixation</ion-option>
+          <ion-option value="27823-ORIF Trimalleolar fracture with posterior fixation">27823- ORIF Trimalleolar fracture with posterior fixation</ion-option>
+          <ion-option value="27827-ORIF Pilon fracture tibia only">27827-ORIF Pilon fracture tibia only</ion-option>
+          <ion-option value="27826-ORIF Pilon fracture fibula only">27826-ORIF Pilon fracture fibula only</ion-option>
+          <ion-option value="27828-ORIF tibia and fibula with Pilon variant">27828-ORIF tibia and fibula with Pilon variant</ion-option>
+          <ion-option value="27829-ORIF ankle syndesmosis">27829-ORIF ankle syndesmosis</ion-option>
+        </ion-select>
+    </ion-item> -->
+
+    <ion-item id="e3-ion-item-01">
+      <ion-label>Clinical Modifiers</ion-label>
+      <ion-select [(ngModel)]="clinicalmodifiers">
+        <ion-option value="-24 unrelated evaluation and management service by same MD during postoperative period">-24 unrelated evaluation and management service by same MD during postoperative period</ion-option>
+        <ion-option value="-25 significant, separately identifiable evaluation and management service by the same physician on the same day of the procedure">-25 significant, separately identifiable evaluation and management service by the same physician on the same day of the procedure</ion-option>
+        <ion-option value="-26 professional component only">-26 professional component only</ion-option>
+        <ion-option value="-56 preoperative management only">-56 preoperative management only</ion-option>
+        <ion-option value="-57 decision for surgery">-57 decision for surgery</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+  <div *ngSwitchCase="'icd'">
+    <ion-item id="e3-ion-item-01" id="e3-ion-item-01">
+    <ion-label>ICD Codes</ion-label>
+  <ion-input type="text" value=""></ion-input>
+    </ion-item>
+  </div>
+
+  </div>
+
+    <ion-item id="e3-ion-item-01">
+      <ion-label>Notes</ion-label>
+      <ion-textarea [(ngModel)]="notes"></ion-textarea>
+    </ion-item>
+
+
+  </ion-content>

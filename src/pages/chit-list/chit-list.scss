@@ -1,0 +1,42 @@
+.chit-list {
+
+  #chit-list-div-01 {
+    color: $teal1;
+  }
+
+  #chit-list-ion-buttons {
+    padding-right: 15px;
+  }
+
+  #chit-list-ion-content {
+    scroll-content {
+      display: flex;
+      background: -moz-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* ff3.6+ */
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $teal3), color-stop(100%, $teal4)); /* safari4+,chrome */
+      background: -webkit-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* safari5.1+,chrome10+ */
+      background: -o-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* opera 11.10+ */
+      background: -ms-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* ie10+ */
+      background: radial-gradient(ellipse at center, $teal3 0%, $teal4 100%); /* w3c */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$teal3', endColorstr='$teal4',GradientType=0 ); /* ie6-9 */
+    }
+  }
+
+  // .chit-list-ion-header {
+  //   -webkit-backdrop-filter: saturate(80%) blur(20px);
+  //   backdrop-filter: saturate(80%) blur(20px);
+  // }
+  //
+  // .chit-list-ion-header .toolbar-background {
+  //   background-color: rgba($teal4, 0.98);
+  // }
+
+  #chit-list-ion-item {
+    background: none;
+    color: $_ion-item-color;
+  }
+
+  #chit-list-ion-navbar {
+    height: 58px;
+      background-color: rgba($teal4, 0.93);
+  }
+}

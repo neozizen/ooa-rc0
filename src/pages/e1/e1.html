@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-navbar id="e1-ion-navbar">
+    <button ion-button menuToggle>
+      <ion-icon color="secondary" name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <div id="e1-div-03">New Chit</div>
+    </ion-title>
+    <ion-buttons id="e1-ion-buttons" end>
+        <button ion-button (click)="return()"><ion-icon color="secondary" name="undo"></ion-icon></button>
+        <button ion-button (click)="saveForm(sendForm(_tabsPatient, _tabsDob, _tabsPhysician, _tabsHospital, _tabsAssist, _tabsDateofsurgery, _tabsInpatientadmit, _tabsErconsultcode, _tabsInpatientconsult, _tabsClinicalmodifiers, _tabsIcd, _tabsCpt, _tabsSurgicalmodifiers, _tabsNotes))">
+        <ion-icon color="secondary" name="send"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar id="e1-ion-toolbar">
+    <ion-segment [(ngModel)]="_tabsForm">
+      <ion-segment-button value="_tabsPatient">
+        Patient Info
+      </ion-segment-button>
+      <ion-segment-button value="_tabsGeneral">
+        General Info
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen id="e1-ion-content">
+  <div [ngSwitch]="_tabsForm" id="e1-div-01">
+    <div *ngSwitchCase="'_tabsPatient'" id="e1-div-02">
+      <ion-grid id="e1-ion-grid">
+        <ion-row id="e1-ion-row">
+          <ion-col width-10 id="e1-ion-col">
+            <ion-icon id="e1-ion-icon" name="person-add" item-left></ion-icon>
+          </ion-col>
+          <ion-col width-90 id="e1-ion-col">
+            <ion-item id="e1-ion-item" >
+              <ion-label stacked id="e1-ion-label">Patient Name</ion-label>
+              <ion-input id="e1-ion-input" type="text" [(ngModel)]="_tabsPatient" text-left></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row id="e1-ion-row">
+          <ion-col width-10 id="e1-ion-col">
+            <ion-icon id="e1-ion-icon" name="calendar" item-left></ion-icon>
+          </ion-col>
+          <ion-col width-90 id="e1-ion-col">
+            <ion-item detail-push id="e1-ion-item">
+              <ion-label stacked id="e1-ion-label">Patient Birthdate</ion-label>
+              <ion-datetime id="e1-ion-datetime"
+              displayFormat="MM/DD/YYYY" pickerFormat="MMMM DDDD YYYY"  [(ngModel)]="_tabsDob"></ion-datetime>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row id="e1-ion-row"></ion-row>
+        <ion-row id="e1-ion-row"></ion-row>
+      </ion-grid>
+    </div>
+
+    <div *ngSwitchCase="'_tabsGeneral'" id="e1-div-02">
+      <ion-grid id="e1-ion-grid">
+        <ion-row id="e1-ion-row">
+          <ion-col width-10 id="e1-ion-col">
+            <ion-icon id="e1-ion-icon" name="person-add" item-left></ion-icon>
+          </ion-col>
+          <ion-col width-90 id="e1-ion-col">
+            <ion-item id="e1-ion-item">
+              <ion-label stacked id="ion-label">Physician Name</ion-label>
+              <ion-select id="e1-ion-select" [(ngModel)]="_tabsPhysician">
+                <ion-option value="Dr. Agtarap">Dr. Agtarap</ion-option>
+                <ion-option value="Dr. Peterson">Dr. Peterson</ion-option>
+                <ion-option value="Dr. Byrd">Dr. Byrd</ion-option>
+                <ion-option value="Dr. Wood">Dr. Wood</ion-option>
+                <ion-option value="Dr. Mckay">Dr. McKay</ion-option>
+                <ion-option value="Dr. Yamamoto">Dr. Yamamoto</ion-option>
+                <ion-option value="Dr. Smith">Dr. Smith</ion-option>
+                <ion-option value="Dr. Will">Dr. Will</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row id="e1-ion-row">
+          <ion-col width-10 id="e1-ion-col">
+            <ion-icon id="e1-ion-icon" name="medical" item-left></ion-icon>
+          </ion-col>
+          <ion-col width-90 id="e1-ion-col">
+            <ion-item id="e1-ion-item">
+              <ion-label stacked id="ion-label">Hospital Name</ion-label>
+              <ion-select id="e1-ion-select" [(ngModel)]="_tabsHospital">
+                <ion-option value="Saint Peter Hospital">Saint Peter Hospital</ion-option>
+                <ion-option value="Capital Medical Center">Capital Medical Center</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row id="e1-ion-row">
+          <ion-col width-10 id="e1-ion-col">
+            <ion-icon id="e1-ion-icon" name="medkit" item-left></ion-icon>
+          </ion-col>
+          <ion-col width-90 id="e1-ion-col">
+            <ion-item id="e1-ion-item">
+              <ion-label stacked id="ion-label">Assistants Name</ion-label>
+              <ion-select  id="e1-ion-select" [(ngModel)]="_tabsAssist">
+                <ion-option value="Carrington Sedgwick PA-C">Carrington Sedgwick PA-C</ion-option>
+                <ion-option value="Michelle Mcginley ARNP">Michelle Mcginley ARNP</ion-option>
+                <ion-option value="Michael Skillretz PA-C">Michael Skillretz PA-C</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row id="e1-ion-row">
+          <ion-col width-10 id="e1-ion-col">
+            <ion-icon id="e1-ion-icon" name="calendar" item-left></ion-icon>
+          </ion-col>
+          <ion-col width-90 id="e1-ion-col">
+            <ion-item detail-push id="e1-ion-item">
+              <ion-label stacked id="ion-label">Date of Surgery</ion-label>
+              <ion-datetime id="e1-ion-datetime" displayFormat="MMM DD YYYY" [(ngModel)]="_tabsDateofsurgery"></ion-datetime>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

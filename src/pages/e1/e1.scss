@@ -1,0 +1,122 @@
+.e1 {
+
+  #e1-div-01{
+      min-height:100%;
+      min-width:100%;
+      background-color:none;
+      display:flex;
+      // align-items:stretch;
+      // vertical-align: middle;
+      // position:relative;
+  }
+
+  #e1-div-02{
+      // min-height:100%;
+      min-width:100%;
+      background-color:none;
+      display:flex;
+      // align-items: stretch;
+      // vertical-align: middle;
+      // position: relative;
+      .item-inner{
+        border-bottom: 1px solid $teal1;
+      }
+  }
+
+  #e1-div-03 {
+    // color: $teal5;
+    color: $teal1;
+  }
+
+  #e1-ion-buttons {
+    padding-right: 15px;
+  }
+
+  #e1-ion-col {
+    text-align: center;
+    align-self: center;
+    // margin: 0;
+    // padding: 0;
+  }
+
+  #e1-ion-content {
+    scroll-content {
+        display: flex;
+        flex-direction: column;
+        background: -moz-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* ff3.6+ */
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $teal3), color-stop(100%, $teal4)); /* safari4+,chrome */
+        background: -webkit-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* safari5.1+,chrome10+ */
+        background: -o-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* opera 11.10+ */
+        background: -ms-radial-gradient(center, ellipse cover, $teal3 0%, $teal4 100%); /* ie10+ */
+        background: radial-gradient(ellipse at center, $teal3 0%, $teal4 100%); /* w3c */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$teal3', endColorstr='$teal4',GradientType=0 ); /* ie6-9 */
+    }
+  }
+
+  #e1-ion-datetime {
+    font-size: 1em;
+    color: $_ion-datetime-color;
+  }
+
+  #e1-ion-grid {
+    // padding-left: 10px;
+    // padding-right: 10px;
+    // padding-bottom: 40px;
+    // padding-top: 20px;
+    // height: 100%;
+  }
+
+  // .e1-ion-header {
+  //   -webkit-backdrop-filter: saturate(80%) blur(20px);
+  //   backdrop-filter: saturate(80%) blur(20px);
+  // }
+
+  // .e1-ion-header .toolbar-background {
+  //   background-color: rgba($teal5, 0.98);
+  // }
+
+  #e1-ion-icon {
+    // padding-top: 7px;
+    // padding-left: 7px;
+    color: $teal2;
+    font-size: 2.5em;
+  }
+
+  #e1-ion-input {
+    color: $_ion-input-color;
+    font-size: 1em;
+    // margin: 0;
+    // padding: 0;
+  }
+
+  #e1-ion-item {
+    // padding-left: 30px;
+    background: none;
+  }
+
+  #e1-ion-label {
+    color: $_ion-label-color;
+  }
+
+  #e1-ion-navbar {
+    height: 44px;
+    padding-top: 7px;
+    background-color: rgba($teal4, 0.93);
+  }
+
+  #e1-ion-row {
+      // display: flex;
+      flex: 1;
+      // margin: 0;
+      // vertical-align: middle;
+  }
+
+  #e1-ion-select {
+    color: $_ion-select-color;
+    font-size: 1em;
+  }
+
+  #e1-ion-toolbar {
+      background-color: rgba($teal4, 0.93);
+  }
+}
