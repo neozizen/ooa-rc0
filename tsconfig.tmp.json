@@ -11,7 +11,7 @@
     "module": "es2015",
     "moduleResolution": "node",
     "target": "es5",
-    "outDir": "C:\\Users\\pc01\\Documents\\GitHub\\ooa-rc0\\.tmp"
+    "outDir": "C:\\Users\\local_admin\\Documents\\GitHub\\ooa-rc0\\.tmp"
   },
   "exclude": [
     "node_modules"
@@ -21,7 +21,7 @@
     "rewriteTsconfig": false
   },
   "include": [
-    "C:\\Users\\pc01\\Documents\\GitHub\\ooa-rc0\\src\\app\\main.dev.ts",
-    "C:\\Users\\pc01\\Documents\\GitHub\\ooa-rc0\\src\\**\\*.d.ts"
+    "C:\\Users\\local_admin\\Documents\\GitHub\\ooa-rc0\\src\\app\\main.dev.ts",
+    "C:\\Users\\local_admin\\Documents\\GitHub\\ooa-rc0\\src\\**\\*.d.ts"
   ]
 }

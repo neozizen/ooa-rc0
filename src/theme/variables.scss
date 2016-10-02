@@ -10,6 +10,7 @@
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
+
 $text-color:        #000;
 $background-color:  #fff;
 
@@ -34,11 +35,11 @@ $ion-list-header-padding-top: 1rem;
 $ion-list-header-padding-bottom: 1rem;
 
 // $text-input-md-show-focus-highlight: false;
-// $toolbar-background: transparent;
+$toolbar-background: transparent;
 
 // JG - this is to fix the toolbar coloring to match theme
-// $toolbar-active-color:	#749bae;
-$toolbar-active-color:	#3a6073;
+ $toolbar-active-color:	#749bae;
+// $toolbar-active-color:	#3a6073;
 // $toolbar-text-color:	$text-color;
 // $toolbar-border-color:	color($colors, dark);
 // $toolbar-inactive-color:	#8c8c8c;
